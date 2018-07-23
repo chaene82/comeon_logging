@@ -4,7 +4,9 @@
 """Tests for `comeon_logging` package."""
 
 import pytest
+from comeon_logging import comeon_logging
 from comeon_logging import send_slack_message
+
 
 
 @pytest.fixture
