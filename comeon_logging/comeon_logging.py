@@ -5,6 +5,7 @@
 from slackclient import SlackClient
 import os
 
+
 def send_slack_message (channel, text):
     """
     send a message by slack
