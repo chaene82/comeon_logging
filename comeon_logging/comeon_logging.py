@@ -18,3 +18,23 @@ def send_slack_message (channel, text):
         return True
     except :
         return False
+
+
+def send_player_missing (text) :
+    """
+    send a message to slack to inform about unmatch player
+
+    """
+    slack_key = os.environ['SLACK_KEY']
+    env = os.environ['ENVIRONMENT']
+    channel = 'missing_player'
+    
+    messages = env + ' : ' + text
+
+    
+    try :
+        slack_client = SlackClient(slack_key)
+        slack_client.api_call("chat.postMessage", channel=channel, text=messages, as_user='haenec')
+        return True
+    except :
+        return False    
