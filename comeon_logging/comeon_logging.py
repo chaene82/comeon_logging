@@ -30,7 +30,7 @@ def send_player_missing (text) :
     if env == 'PROD':
         channel = 'missing_player'
     else :
-        channel = env + '_missing_player'
+        channel = env.lower() + '_missing_player'
     
     messages = env + ' : ' + text
 
