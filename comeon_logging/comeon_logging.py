@@ -27,7 +27,10 @@ def send_player_missing (text) :
     """
     slack_key = os.environ['SLACK_KEY']
     env = os.environ['ENVIRONMENT']
-    channel = 'missing_player'
+    if env == 'PROD':
+        channel = 'missing_player'
+    else :
+        channel = env + '_missing_player'
     
     messages = env + ' : ' + text
 

@@ -9,6 +9,7 @@ from comeon_logging import send_slack_message, send_player_missing
 
 
 
+
 @pytest.fixture
 def response():
     """Sample pytest fixture.
